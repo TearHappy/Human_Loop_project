@@ -1,25 +1,27 @@
-## Run the app locally
+## RUN ON DESKTOP
 
-1. Install dependencies (once): `npm install`
-2. Start dev server: `npm run dev -- --hostname 0.0.0.0`
-   - Defaults to port **7777**.
-   - Local URL: `http://localhost:7777`
-3. Production build/start:
-   - Build: `npm run build`
-   - Start: `npm run start -- --hostname 0.0.0.0`
+1. Configure the MCP server :  
 
-## Access from another device (mobile/tablet on same Wi‑Fi)
+ "human-assistant": {
+      "args": [
+        "c:\\Users\\[YOUR_NAME]\\Desktop\\Human_Loop_project\\mcp-server.js"
+      ],
+      "command": "node",
+      "disabled": false,
+      "disabledTools": []
+    },
 
-1. Find your Wi‑Fi IPv4 (Windows): run `ipconfig` and look for “Wi‑Fi” IPv4 (e.g., `192.168.x.x`).
-2. Ensure the dev server is started with `--hostname 0.0.0.0` (see above).
-3. On the mobile browser, open `http://<Your-WiFi-IP>:7777` (example: `http://192.168.0.95:7777`).
-4. If unreachable, allow inbound TCP on port **7777** in Windows Defender Firewall.
+2. Install dependencies (once): `npm install`
+3. Start dev server: `npm run dev`
+   - Access chat via URL: `http://localhost:7777`
 
-## Environment
+-------------------------------------------------------------------------------------------------------------------------------
 
-- Env file: `.env` (already present). Add any required keys there before running.
+## RUN ON MOBILE (SAME Wi‑Fi ONLY!)
 
-## Notes
+1. Find your Wi‑Fi IPv4 (Windows): run `ipconfig`
+2. On the mobile browser, open `http://<Your-WiFi-IP>:7777` (example: `http://192.168.0.100:7777`).
 
-- Port is fixed to **7777** in scripts; change with `--port <port>` if needed.
-- The startup banner may show multiple interfaces; use your Wi‑Fi IP for mobile access.
+
+PS:If unreachable, allow inbound TCP on port **7777** in Windows Defender Firewall.
+
