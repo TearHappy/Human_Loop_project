@@ -1,0 +1,250 @@
+/* Shimmer animation */
+@keyframes shimmer {
+	0% {
+		background-position: -1000px 0;
+	}
+	100% {
+		background-position: 1000px 0;
+	}
+}
+
+/* Skeleton container */
+.skeletonContainer {
+	padding: 16px;
+}
+
+/* Skeleton card */
+.skeletonCard {
+	border: 1px solid #333333;
+	border-radius: 8px;
+	background: transparent;
+	margin-bottom: 12px;
+	overflow: hidden;
+}
+
+/* Header section */
+.skeletonHeader {
+	padding: 12px 12px 8px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.skeletonHeaderLeft {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+/* Main thought badge skeleton */
+.skeletonThoughtBadge {
+	height: 20px;
+	width: 110px;
+	background: linear-gradient(
+		to right,
+		#1a1a1a 0%,
+		#2a2a2a 45%,
+		#1f1f1f 55%,
+		#1a1a1a 100%
+	);
+	background-size: 1000px 100%;
+	animation: shimmer 18s infinite ease-in-out;
+	border-radius: 6px;
+	display: flex;
+	align-items: center;
+	padding: 4px 8px;
+}
+
+/* Circle inside badge */
+.skeletonBadgeCircle {
+	width: 12px;
+	height: 12px;
+	background: linear-gradient(
+		to right,
+		#1a1a1a 0%,
+		#2a2a2a 45%,
+		#1f1f1f 55%,
+		#1a1a1a 100%
+	);
+	background-size: 1000px 100%;
+	animation: shimmer 18s infinite ease-in-out;
+	border-radius: 50%;
+	margin-right: 6px;
+}
+
+/* Text inside badge */
+.skeletonBadgeText {
+	width: 48px;
+	height: 12px;
+	background: linear-gradient(
+		to right,
+		#1a1a1a 0%,
+		#2a2a2a 45%,
+		#1f1f1f 55%,
+		#1a1a1a 100%
+	);
+	background-size: 1000px 100%;
+	animation: shimmer 18s infinite ease-in-out;
+	border-radius: 2px;
+}
+
+/* Revision badge skeleton */
+.skeletonRevisionBadge {
+	height: 20px;
+	width: 100px;
+	background: linear-gradient(
+		to right,
+		#1a1a1a 0%,
+		#2a2a2a 45%,
+		#1f1f1f 55%,
+		#1a1a1a 100%
+	);
+	background-size: 1000px 100%;
+	animation: shimmer 18s infinite ease-in-out;
+	border-radius: 6px;
+	border: 1px solid #333333;
+	padding: 4px 8px;
+}
+
+.skeletonRevisionText {
+	width: 56px;
+	height: 12px;
+	background: linear-gradient(
+		to right,
+		#1a1a1a 0%,
+		#2a2a2a 45%,
+		#1f1f1f 55%,
+		#1a1a1a 100%
+	);
+	background-size: 1000px 100%;
+	animation: shimmer 18s infinite ease-in-out;
+	border-radius: 2px;
+}
+
+/* Expand/collapse indicator */
+.skeletonExpandIndicator {
+	width: 16px;
+	height: 16px;
+	background: linear-gradient(
+		to right,
+		#1a1a1a 0%,
+		#2a2a2a 45%,
+		#1f1f1f 55%,
+		#1a1a1a 100%
+	);
+	background-size: 1000px 100%;
+	animation: shimmer 18s infinite ease-in-out;
+	border-radius: 4px;
+	opacity: 0.5;
+}
+
+/* Expanded content section */
+.skeletonExpandedContent {
+	padding: 12px;
+	border-top: 1px solid #333333;
+}
+
+.skeletonContentLines {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+/* Content lines */
+.skeletonContentLine {
+	height: 14px;
+	background: linear-gradient(
+		to right,
+		#1a1a1a 0%,
+		#2a2a2a 45%,
+		#1f1f1f 55%,
+		#1a1a1a 100%
+	);
+	background-size: 1000px 100%;
+	animation: shimmer 18s infinite ease-in-out;
+	border-radius: 4px;
+}
+
+.skeletonContentLine.width100 {
+	width: 100%;
+}
+.skeletonContentLine.width95 {
+	width: 95%;
+}
+.skeletonContentLine.width88 {
+	width: 88%;
+}
+.skeletonContentLine.width80 {
+	width: 80%;
+}
+
+/* Mini badges at bottom */
+.skeletonMiniBadges {
+	display: flex;
+	gap: 6px;
+	margin-top: 12px;
+}
+
+.skeletonMiniBadge {
+	height: 16px;
+	background: linear-gradient(
+		to right,
+		#1a1a1a 0%,
+		#2a2a2a 45%,
+		#1f1f1f 55%,
+		#1a1a1a 100%
+	);
+	background-size: 1000px 100%;
+	animation: shimmer 18s infinite ease-in-out;
+	border-radius: 9999px;
+	padding: 0 8px;
+}
+
+.skeletonMiniBadge.width70 {
+	width: 70px;
+}
+.skeletonMiniBadge.width90 {
+	width: 90px;
+}
+
+/* Summary skeleton at bottom */
+.skeletonSummary {
+	border: 1px solid #333333;
+	border-radius: 8px;
+	background: transparent;
+	padding: 12px;
+	box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.skeletonSummaryLines {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.skeletonSummaryLine {
+	height: 12px;
+	background: linear-gradient(
+		to right,
+		#1a1a1a 0%,
+		#2a2a2a 45%,
+		#1f1f1f 55%,
+		#1a1a1a 100%
+	);
+	background-size: 1000px 100%;
+	animation: shimmer 18s infinite ease-in-out;
+	border-radius: 4px;
+}
+
+.skeletonSummaryLine.width128 {
+	width: 128px;
+}
+.skeletonSummaryLine.width112 {
+	width: 112px;
+}
+.skeletonSummaryLine.width96 {
+	width: 96px;
+}
+.skeletonSummaryLine.width80 {
+	width: 80px;
+}

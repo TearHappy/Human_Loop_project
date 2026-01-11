@@ -1,0 +1,160 @@
+/* Custom Divider Component */
+.customDivider {
+	position: relative;
+	height: 24px;
+	width: 1.5px;
+	margin: 0 4px;
+}
+
+.customDivider::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		to top,
+		transparent,
+		rgba(255, 255, 255, 0.43),
+		transparent
+	);
+	border-radius: 50%;
+	clip-path: polygon(
+		0% 0%,
+		100% 0%,
+		100% 40%,
+		140% 50%,
+		100% 60%,
+		100% 100%,
+		0% 100%,
+		0% 60%,
+		-40% 50%,
+		0% 40%
+	);
+}
+
+/* Styled Prompt Input Container */
+.styledPromptContainer {
+	border-radius: 24px !important;
+	border: 1px solid #444444;
+	background: #1f2023;
+	padding: 8px;
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.24);
+	transition: all 0.3s ease;
+}
+
+.styledPromptContainer.loading {
+	border-color: rgba(239, 68, 68, 0.7);
+}
+
+.styledPromptContainer textarea {
+	background: transparent !important;
+}
+
+/* Styled Overlay Panel Container */
+.styledOverlayPanel {
+	border-radius: 24px !important;
+	border: 1px solid #444444;
+	background: #1f2023;
+	padding: 8px;
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.24);
+	transition: all 0.3s ease;
+	max-height: 384px;
+	overflow: hidden;
+}
+
+/* Styled Add Button */
+.styledAddButton {
+	width: 100%;
+	padding: 12px;
+	margin-top: 8px;
+	border-radius: 8px;
+	border: 1px solid #444444;
+	background: transparent;
+	color: #9ca3af;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.styledAddButton:hover {
+	background: #2a2a2a;
+	color: white;
+}
+
+.styledAddButton .plusIcon {
+	font-size: 14px;
+}
+
+/* Styled Input Container */
+.styledInputContainer {
+	display: flex;
+	align-items: center;
+	padding: 12px;
+	border-radius: 8px;
+	border: 1px solid #444444;
+	background: transparent;
+}
+
+.styledInputContainer input {
+	flex: 1;
+	background: transparent !important;
+	color: white;
+	outline: none;
+	border: none;
+	font-size: 14px;
+}
+
+.styledInputContainer input::placeholder {
+	color: #9ca3af;
+}
+
+/* Styled Item Container */
+.styledItemContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12px;
+	background: #2a2a2a;
+	border-radius: 8px;
+	border: 1px solid #444444;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.styledItemContainer.isEditing {
+	cursor: text;
+}
+
+.styledItemContainer:hover {
+	background: #333333;
+}
+
+.styledItemContainer .itemText {
+	flex: 1;
+	color: #d1d5db;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.styledItemContainer.isEditing .itemText {
+	cursor: text;
+}
+
+.styledItemContainer .itemInput {
+	flex: 1;
+	background: transparent !important;
+	color: white;
+	outline: none;
+	border: none;
+	font-size: 14px;
+}
+
+.styledItemContainer .actionButtons {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	margin-left: 8px;
+}
